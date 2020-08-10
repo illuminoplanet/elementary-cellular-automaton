@@ -1,14 +1,12 @@
-import React, {Component} from 'react';
-import './App.css';
-import ElementaryCellularAutomaton from './ElementaryCellularAutomaton/ElementaryCellularAutomaton.jsx'
+import React from "react";
+import ElementaryCellularAutomaton from "./ElementaryCellularAutomaton/ElementaryCellularAutomaton";
+import "./App.css";
 
-
-class App extends Component {
-  render() { 
+function App() {
     return (
-      <ElementaryCellularAutomaton></ElementaryCellularAutomaton>
+        <div className="App">
+            <ElementaryCellularAutomaton></ElementaryCellularAutomaton>
+        </div>
     );
-  }
 }
-
 export default App;
