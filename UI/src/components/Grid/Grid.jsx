@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Cell from "./Cell/Cell";
-import "./ElementaryCellularAutomaton.css";
+import Cell from "./Cell";
+import "./Grid.css";
 
-export default class ElementaryCellularAutomaton extends Component {
+export default class Grid extends Component {
     constructor(props) {
         super(props);
         this.state = {
