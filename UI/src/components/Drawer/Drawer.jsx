@@ -4,6 +4,21 @@ import RuleSwitch from "./RuleSwitch";
 import "./Drawer.css";
 
 export default class Drawer extends Component {
+    getRuleSwitch() {
+        const ruleSwitch = [];
+        for (let i = 0; i <= 7; i++) {
+            ruleSwitch.push(
+                <RuleSwitch
+                    key={7 - i}
+                    toggle={this.props.rulesSetHandler}
+                    isOne={this.props.currentRules[i]}
+                    pattern={(7 - i).toString(2).padStart(3, "0")}
+                    idx={i}
+                ></RuleSwitch>
+            );
+        }
+        return ruleSwitch;
+    }
     render() {
         const backdrop = this.props.isOpen ? (
             <Backdrop toggle={this.props.drawerToggleHandler}></Backdrop>
@@ -11,18 +26,10 @@ export default class Drawer extends Component {
         const className = this.props.isOpen
             ? "drawer-window drawer-window-open"
             : "drawer-window";
+        const ruleSwitch = this.getRuleSwitch();
         return (
             <div className="drawer">
-                <div className={className}>
-                    <RuleSwitch pattern={"111"}></RuleSwitch>
-                    <RuleSwitch pattern={"110"}></RuleSwitch>
-                    <RuleSwitch pattern={"101"}></RuleSwitch>
-                    <RuleSwitch pattern={"100"}></RuleSwitch>
-                    <RuleSwitch pattern={"011"}></RuleSwitch>
-                    <RuleSwitch pattern={"010"}></RuleSwitch>
-                    <RuleSwitch pattern={"001"}></RuleSwitch>
-                    <RuleSwitch pattern={"000"}></RuleSwitch>
-                </div>
+                <div className={className}>{ruleSwitch}</div>
 
                 {backdrop}
             </div>

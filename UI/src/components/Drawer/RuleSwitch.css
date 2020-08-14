@@ -1,0 +1,13 @@
+.rule-switch {
+    margin-left: 50%;
+    width: 150px;
+    height: 60px;
+}
+.rule-switch-one {
+    color: black;
+    background: white;
+}
+.rule-switch-zero {
+    color: white;
+    background: black;
+}
