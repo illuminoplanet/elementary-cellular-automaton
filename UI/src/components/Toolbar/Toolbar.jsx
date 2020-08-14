@@ -12,7 +12,7 @@ export default class Toolbar extends Component {
                             toggle={this.props.drawerToggleHandler}
                         ></ToggleButton>
                     </div>
-                    <div className="toolbar-title"> Set Rules </div>
+                    <div className="toolbar-title"></div>
                 </nav>
             </header>
         );

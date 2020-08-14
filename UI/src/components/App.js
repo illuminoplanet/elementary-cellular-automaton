@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Grid from "./Grid/Grid";
-import Toolbar from "./Drawer/Toolbar";
+import Toolbar from "./Toolbar/Toolbar";
 import Drawer from "./Drawer/Drawer";
 
 import "./App.css";
@@ -23,7 +23,10 @@ export default class App extends Component {
                 <Toolbar
                     drawerToggleHandler={this.drawerToggleHandler}
                 ></Toolbar>
-                <Drawer open={this.state.drawerOpen}></Drawer>
+                <Drawer
+                    isOpen={this.state.drawerOpen}
+                    drawerToggleHandler={this.drawerToggleHandler}
+                ></Drawer>
                 <Grid></Grid>
             </div>
         );
