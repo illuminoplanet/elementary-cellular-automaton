@@ -12,8 +12,45 @@ export default class App extends Component {
         this.state = {
             drawerOpen: false,
             rules: [0, 0, 0, 0, 0, 0, 0, 0],
+            cells: [],
         };
     }
+
+    componentDidMount() {
+        const cells = [];
+
+        for (let row = 0; row < 100; row++) {
+            const current_row = [];
+            for (let col = 0; col < 100; col++) {
+                const current_cell = {
+                    col,
+                    row,
+                    is_live: false,
+                };
+                current_row.push(current_cell);
+            }
+            cells.push(current_row);
+        }
+        this.setState({ cells });
+    }
+    fetchGrid() {
+        fetch("/api", {
+            method: "POST",
+            mode: "cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                firstParam: "yourValue",
+                secondParam: "yourOtherValue",
+            }),
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((json) => {
+                console.log(json.hello);
+            });
+    }
+
     drawerToggleHandler = () => {
         let { drawerOpen } = this.state;
         drawerOpen = !drawerOpen;
@@ -23,8 +60,11 @@ export default class App extends Component {
         let { rules } = this.state;
         rules[idx] = 1 - rules[idx];
         this.setState({ rules });
-        console.log(rules);
     };
+    startHandler = () => {
+        this.fetchGrid();
+    };
+
     render() {
         return (
             <div className="app">
@@ -37,8 +77,8 @@ export default class App extends Component {
                     rulesSetHandler={this.rulesSetHandler}
                     currentRules={this.state.rules}
                 ></Drawer>
-                <ButtonGroup></ButtonGroup>
-                <Grid></Grid>
+                <ButtonGroup startHandler={this.startHandler}></ButtonGroup>
+                <Grid cells={this.state.cells}></Grid>
             </div>
         );
     }

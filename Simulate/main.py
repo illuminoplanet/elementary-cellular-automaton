@@ -1,9 +1,14 @@
-import flask
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 
-app = flask.Flask("__main__")
+app = Flask("__main__")
 
-@app.route("/") 
+
+@app.route("/api", methods=["POST"])
 def my_index():
-    return flask.render_template('index.html')
+    current_rules = request.json
+    return {"hello": "hello"}
 
+
+CORS(app)
 app.run(debug=True)

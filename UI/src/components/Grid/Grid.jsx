@@ -3,33 +3,8 @@ import Cell from "./Cell";
 import "./Grid.css";
 
 export default class Grid extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            cells: [],
-        };
-    }
-
-    componentDidMount() {
-        const cells = [];
-
-        for (let row = 0; row < 100; row++) {
-            const current_row = [];
-            for (let col = 0; col < 100; col++) {
-                const current_cell = {
-                    col,
-                    row,
-                    is_live: col === 10,
-                };
-                current_row.push(current_cell);
-            }
-            cells.push(current_row);
-        }
-        this.setState({ cells });
-    }
-
     render() {
-        const { cells } = this.state;
+        const { cells } = this.props;
 
         return (
             <div className="grid">
