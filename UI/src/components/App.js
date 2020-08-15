@@ -13,6 +13,7 @@ export default class App extends Component {
             drawerOpen: false,
             rules: [0, 0, 0, 0, 0, 0, 0, 0],
             cells: [],
+            grid: null
         };
     }
 
@@ -23,8 +24,6 @@ export default class App extends Component {
             const current_row = [];
             for (let col = 0; col < 100; col++) {
                 const current_cell = {
-                    col,
-                    row,
                     is_live: false,
                 };
                 current_row.push(current_cell);
@@ -39,16 +38,32 @@ export default class App extends Component {
             mode: "cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                firstParam: "yourValue",
-                secondParam: "yourOtherValue",
+                rules: this.state.rules,
             }),
         })
             .then((response) => {
                 return response.json();
             })
             .then((json) => {
-                console.log(json.hello);
+                const grid = json.grid;
+                this.setState({ grid });
+                this.updateCells();
             });
+    }
+    updateCells(grid) {
+        const cells = [];
+
+        for (let row = 0; row < 100; row++) {
+            const current_row = [];
+            for (let col = 0; col < 100; col++) {
+                const current_cell = {
+                    is_live: this.state.grid[row][col],
+                };
+                current_row.push(current_cell);
+            }
+            cells.push(current_row);
+        }
+        this.setState({ cells });
     }
 
     drawerToggleHandler = () => {
@@ -66,7 +81,7 @@ export default class App extends Component {
     };
 
     render() {
-        return (
+        return (    
             <div className="app">
                 <Toolbar
                     drawerToggleHandler={this.drawerToggleHandler}
