@@ -13,7 +13,7 @@ export default class App extends Component {
             drawerOpen: false,
             rules: [0, 0, 0, 0, 0, 0, 0, 0],
             cells: [],
-            grid: null
+            grid: null,
         };
     }
 
@@ -33,12 +33,12 @@ export default class App extends Component {
         this.setState({ cells });
     }
     fetchGrid() {
-        fetch("/api", {
+        fetch("/api/return-grid", {
             method: "POST",
             mode: "cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                rules: this.state.rules,
+                rule: this.state.rules,
             }),
         })
             .then((response) => {
@@ -81,7 +81,7 @@ export default class App extends Component {
     };
 
     render() {
-        return (    
+        return (
             <div className="app">
                 <Toolbar
                     drawerToggleHandler={this.drawerToggleHandler}

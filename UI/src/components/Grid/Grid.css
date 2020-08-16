@@ -1,4 +1,14 @@
 .grid {
-    margin: 140px 0px 0px 80px;
+    background-color: #24272e;
+    position: fixed;
+    top: 140px;
+    left: 80px;
+    width: 748px;
+    height: 748px;
+    border-radius: 15px;
     line-height: 0px;
+}
+.grid__group {
+    padding-top: 24px;
+    padding-left: 24px;
 }

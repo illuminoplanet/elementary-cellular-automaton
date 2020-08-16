@@ -1,12 +1,12 @@
 .cell {
     width: 7px;
     height: 7px;
-    outline: 1px solid grey;
+    outline: none;
     display: inline-block;
 }
 .cell-live {
     background-color: white;
 }
 .cell-dead {
-    background-color: black;
+    background-color: rgb(19, 19, 19);
 }

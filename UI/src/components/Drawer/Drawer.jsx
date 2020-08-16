@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Backdrop from "./Backdrop";
 import RuleSwitch from "./RuleSwitch";
 import "./Drawer.css";
 
@@ -21,17 +20,22 @@ export default class Drawer extends Component {
     }
     render() {
         const backdrop = this.props.isOpen ? (
-            <Backdrop toggle={this.props.drawerToggleHandler}></Backdrop>
+            <button
+                className="drawer__backdrop"
+                onClick={this.props.drawerToggleHandler}
+            ></button>
         ) : null;
         const className = this.props.isOpen
-            ? "drawer-window drawer-window-open"
-            : "drawer-window";
+            ? "drawer__window drawer__window--open"
+            : "drawer__window";
         const ruleSwitch = this.getRuleSwitch();
         return (
             <div className="drawer">
-                <div className={className}>{ruleSwitch}</div>
-
                 {backdrop}
+                <div className={className}>
+                    <div className="drawer__title">Set Rules</div>
+                    <div className="drawer__switch-group">{ruleSwitch}</div>
+                </div>
             </div>
         );
     }

@@ -1,7 +1,9 @@
 .button-group {
+    background-color: #24272e;
     position: fixed;
-    top: 0px;
-    right: 20%;
-    height: 100%;
-    width: 30%;
+    top: 160px;
+    right: 300px;
+    height: 720px;
+    width: 640px;
+    border-radius: 20px;
 }

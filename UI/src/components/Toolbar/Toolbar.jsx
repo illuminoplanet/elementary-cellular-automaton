@@ -12,7 +12,9 @@ export default class Toolbar extends Component {
                             toggle={this.props.drawerToggleHandler}
                         ></ToggleButton>
                     </div>
-                    <div className="toolbar-title"></div>
+                    <div className="toolbar__title">
+                        Elementary Cellular Automaton
+                    </div>
                 </nav>
             </header>
         );

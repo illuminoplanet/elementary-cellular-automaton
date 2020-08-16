@@ -1,11 +1,21 @@
-.drawer-window {
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+
+.drawer__title {
+    position: fixed;
+    top: 24px;
+    right: 112px;
+    font-family: "Comfortaa";
+    font-size: 40px;
+    color: white;
+}
+.drawer__window {
     position: fixed;
     top: 0px;
     right: 0px;
-    width: 30%;
+    background-color: #181b23;
+    width: 400px;
     height: 100%;
     box-shadow: 2px 0px 5px black;
-    background: white;
     z-index: 200;
     transform: translateX(100%);
     transition: transform 0.3s ease-out;
@@ -13,6 +23,29 @@
     display: flex;
     flex-direction: column;
 }
-.drawer-window-open {
+.drawer__window--open {
     transform: translateX(0%);
+}
+.drawer__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    padding: 0px;
+    z-index: 100;
+}
+.drawer__backdrop:focus {
+    outline: none;
+}
+.drawer__switch-group {
+    position: fixed;
+    background-color: #2d313a;
+    top: 90px;
+    bottom: 50px;
+    left: 40px;
+    right: 40px;
+    border-radius: 15px;
 }

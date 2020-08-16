@@ -8,21 +8,23 @@ export default class Grid extends Component {
 
         return (
             <div className="grid">
-                {cells.map((row, row_idx) => {
-                    return (
-                        <div key={row_idx}>
-                            {row.map((cell, cell_idx) => {
-                                const { is_live } = cell;
-                                return (
-                                    <Cell
-                                        key={cell_idx}
-                                        is_live={is_live}
-                                    ></Cell>
-                                );
-                            })}
-                        </div>
-                    );
-                })}
+                <div className="grid__group">
+                    {cells.map((row, row_idx) => {
+                        return (
+                            <div key={row_idx}>
+                                {row.map((cell, cell_idx) => {
+                                    const { is_live } = cell;
+                                    return (
+                                        <Cell
+                                            key={cell_idx}
+                                            is_live={is_live}
+                                        ></Cell>
+                                    );
+                                })}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         );
     }
