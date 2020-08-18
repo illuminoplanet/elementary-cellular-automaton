@@ -67,9 +67,9 @@ export default class App extends Component {
     }
 
     drawerToggleHandler = () => {
-        let { drawerOpen } = this.state;
-        drawerOpen = !drawerOpen;
-        this.setState({ drawerOpen });
+        this.setState((prevState) => {
+            return { drawerOpen: !this.state.drawerOpen };
+        });
     };
     rulesSetHandler = (idx) => {
         let { rules } = this.state;
@@ -90,10 +90,10 @@ export default class App extends Component {
                     drawerToggleHandler={this.drawerToggleHandler}
                 ></Toolbar>
                 <Drawer
-                    isOpen={this.state.drawerOpen}
+                    drawerOpen={this.state.drawerOpen}
                     drawerToggleHandler={this.drawerToggleHandler}
                     rulesSetHandler={this.rulesSetHandler}
-                    currentRules={this.state.rules}
+                    currentRule={this.state.rules}
                 ></Drawer>
                 <Button
                     startHandler={this.startHandler}
