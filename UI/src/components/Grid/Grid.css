@@ -1,11 +1,19 @@
 .grid {
-    background-color: #24272e;
-    position: fixed;
-    top: 140px;
-    left: 80px;
+    position: absolute;
     width: 748px;
     height: 748px;
-    border-radius: 15px;
+    left: 586px;
+    top: 152px;
+
+    background: linear-gradient(
+        135.18deg,
+        #431153 24.92%,
+        #3a3363 36.03%,
+        #215e79 50.26%,
+        #20a5b4 65.34%,
+        #0cbaba 75.08%
+    );
+    border-radius: 6px;
     line-height: 0px;
 }
 .grid__group {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Grid from "./Grid/Grid";
 import Toolbar from "./Toolbar/Toolbar";
 import Drawer from "./Drawer/Drawer";
-import ButtonGroup from "./ButtonGroup/ButtonGroup";
+import Button from "./Button/Button";
 
 import "./App.css";
 
@@ -79,6 +79,9 @@ export default class App extends Component {
     startHandler = () => {
         this.fetchGrid();
     };
+    resetHandler = () => {
+        this.fetchGrid();
+    };
 
     render() {
         return (
@@ -92,7 +95,10 @@ export default class App extends Component {
                     rulesSetHandler={this.rulesSetHandler}
                     currentRules={this.state.rules}
                 ></Drawer>
-                <ButtonGroup startHandler={this.startHandler}></ButtonGroup>
+                <Button
+                    startHandler={this.startHandler}
+                    resetHandler={this.resetHandler}
+                ></Button>
                 <Grid cells={this.state.cells}></Grid>
             </div>
         );

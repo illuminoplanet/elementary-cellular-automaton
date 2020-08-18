@@ -4,7 +4,7 @@ import "./ToggleButton.css";
 export default class ToggleButton extends Component {
     render() {
         return (
-            <button className="toggle-button" onClick={this.props.toggle}>
+            <button className="toggle-button" onClick={this.props.openDrawer}>
                 <div className="toggle-button__line"></div>
                 <div className="toggle-button__line"></div>
                 <div className="toggle-button__line"></div>

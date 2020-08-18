@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Saira");
+
+.button {
+    position: absolute;
+    left: 1440px;
+    top: 192px;
+}
+.button button {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+
+    border: none;
+    cursor: pointer;
+}
+.button button:focus {
+    outline: none;
+}
+
+.button--start {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    background-image: url(../../images/start_button.svg);
+}
+.button--start[pulse="1"] {
+    animation: pulse-start 1s, flinch 0.4s;
+}
+.button--start__label {
+    position: absolute;
+    left: 120px;
+    top: 2px;
+
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 76px;
+
+    color: #000000;
+}
+@keyframes pulse-start {
+    0% {
+        box-shadow: 0 0 0 0 rgba(120, 255, 190, 1);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(120, 255, 190, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(120, 255, 190, 0);
+    }
+}
+@keyframes flinch {
+    0% {
+        transform: scale(0.98);
+    }
+    70% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(0.99);
+    }
+}
+.button--reset {
+    position: absolute;
+    left: 0px;
+    top: 132px;
+
+    background-image: url(../../images/reset_button.svg);
+}
+.button--reset[pulse="1"] {
+    animation: pulse-reset 1s, flinch 0.4s;
+}
+.button--reset__label {
+    position: absolute;
+    left: 120px;
+    top: 134px;
+
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 76px;
+
+    color: #000000;
+}
+@keyframes pulse-reset {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 114, 114, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(255, 114, 114, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 114, 114, 0);
+    }
+}
