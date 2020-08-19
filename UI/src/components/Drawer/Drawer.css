@@ -117,6 +117,7 @@
     border-left: 20px solid #2e2e2e;
 }
 .drawer__window__container input {
+    cursor: pointer;
     display: none;
 }
 .drawer__window__container .checkmark {

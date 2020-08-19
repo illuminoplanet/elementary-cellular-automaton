@@ -13,24 +13,21 @@ export default class App extends Component {
             currentRules: [0, 0, 0, 0, 0, 0, 0, 0],
             rule: 0,
             cells: [],
-            grid: null,
+            grid: [],
         };
     }
 
     componentDidMount() {
-        const cells = [];
-
-        for (let row = 0; row < 100; row++) {
-            const current_row = [];
-            for (let col = 0; col < 100; col++) {
-                const current_cell = {
-                    is_live: false,
-                };
-                current_row.push(current_cell);
+        const { grid } = this.state;
+        for (let i = 0; i < 100; i++) {
+            const currentRow = [];
+            for (let j = 0; j < 100; j++) {
+                currentRow.push(0);
             }
-            cells.push(current_row);
+            grid.push(currentRow);
         }
-        this.setState({ cells });
+        this.setState({ grid });
+        this.updateCells();
     }
     fetchGrid() {
         fetch("/api/return-grid", {
@@ -72,7 +69,14 @@ export default class App extends Component {
         this.fetchGrid();
     };
     resetHandler = () => {
-        this.fetchGrid();
+        const { grid } = this.state;
+        for (let i = 0; i < 100; i++) {
+            for (let j = 0; j < 100; j++) {
+                grid[i][j] = 0;
+            }
+        }
+        this.setState({ grid });
+        this.updateCells();
     };
 
     render() {
