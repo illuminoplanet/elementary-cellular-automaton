@@ -5,3 +5,26 @@
     height: 100%;
     width: 100%;
 }
+.arrow {
+    position: absolute;
+    left: 272px;
+    top: 248px;
+
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    border-left: 20px solid #2e2e2e;
+}
+.rule {
+    position: absolute;
+
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 76px;
+
+    color: #2e2e2e;
+}

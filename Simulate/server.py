@@ -17,8 +17,8 @@ def return_grid():
         Simulated grid, will be automatically converted from dict to JSON format
 
     """
-    rule = request.json["rule"]  # Get the rules
-    grid = get_grid(rule)  # Simulate the grid accordingly
+    rules = request.json["rules"]  # Get the rules
+    grid = get_grid(rules)  # Simulate the grid accordingly
     return {"grid": grid}
 
 

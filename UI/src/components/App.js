@@ -11,6 +11,7 @@ export default class App extends Component {
         super();
         this.state = {
             currentRules: [0, 0, 0, 0, 0, 0, 0, 0],
+            rule: 0,
             cells: [],
             grid: null,
         };
@@ -37,7 +38,7 @@ export default class App extends Component {
             mode: "cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                rule: this.state.rules,
+                rules: this.state.currentRules,
             }),
         })
             .then((response) => {
@@ -64,8 +65,8 @@ export default class App extends Component {
         }
         this.setState({ cells });
     }
-    rulesSetHandler = (currentRules) => {
-        this.setState({ currentRules });
+    rulesSetHandler = (currentRules, rule) => {
+        this.setState({ currentRules, rule });
     };
     startHandler = () => {
         this.fetchGrid();
@@ -77,6 +78,10 @@ export default class App extends Component {
     render() {
         return (
             <div className="app">
+                <div className="rule" style={{ top: 230, left: 318 }}>
+                    Rule {this.state.rule}
+                </div>
+                <div className="arrow"></div>
                 <Toolbar
                     drawerToggleHandler={this.drawerToggleHandler}
                 ></Toolbar>

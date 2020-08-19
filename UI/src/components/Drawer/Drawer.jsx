@@ -71,7 +71,10 @@ export default class Drawer extends Component {
                 className="drawer__backdrop"
                 onClick={() => {
                     this.drawerToggleHandler();
-                    this.props.rulesSetHandler(this.state.currentRules);
+                    this.props.rulesSetHandler(
+                        this.state.currentRules,
+                        this.state.rule
+                    );
                 }}
             ></button>
         ) : null;
@@ -96,7 +99,7 @@ export default class Drawer extends Component {
                     ></div>
                     <div
                         className="drawer__window__line"
-                        style={{ bottom: 90 }}
+                        style={{ top: 544 }}
                     ></div>
                     <div
                         className="drawer__window__arrow"
@@ -105,7 +108,10 @@ export default class Drawer extends Component {
                     <div className="drawer__window__button">
                         {this.state.drawerWindowButton}
                     </div>
-                    <div className="drawer__window__rule">
+                    <div
+                        className="drawer__window__rule"
+                        style={{ top: 832, left: 142 }}
+                    >
                         Rule {this.state.rule}
                     </div>
                 </div>
