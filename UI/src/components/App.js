@@ -10,8 +10,7 @@ export default class App extends Component {
     constructor() {
         super();
         this.state = {
-            drawerOpen: false,
-            rules: [0, 0, 0, 0, 0, 0, 0, 0],
+            currentRules: [0, 0, 0, 0, 0, 0, 0, 0],
             cells: [],
             grid: null,
         };
@@ -65,16 +64,8 @@ export default class App extends Component {
         }
         this.setState({ cells });
     }
-
-    drawerToggleHandler = () => {
-        this.setState((prevState) => {
-            return { drawerOpen: !this.state.drawerOpen };
-        });
-    };
-    rulesSetHandler = (idx) => {
-        let { rules } = this.state;
-        rules[idx] = 1 - rules[idx];
-        this.setState({ rules });
+    rulesSetHandler = (currentRules) => {
+        this.setState({ currentRules });
     };
     startHandler = () => {
         this.fetchGrid();
@@ -90,10 +81,8 @@ export default class App extends Component {
                     drawerToggleHandler={this.drawerToggleHandler}
                 ></Toolbar>
                 <Drawer
-                    drawerOpen={this.state.drawerOpen}
-                    drawerToggleHandler={this.drawerToggleHandler}
                     rulesSetHandler={this.rulesSetHandler}
-                    currentRule={this.state.rules}
+                    currentRules={this.state.rules}
                 ></Drawer>
                 <Button
                     startHandler={this.startHandler}

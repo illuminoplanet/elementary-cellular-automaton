@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ToggleButton from "./ToggleButton";
 import "./Toolbar.css";
 
 export default class Toolbar extends Component {
@@ -14,11 +13,6 @@ export default class Toolbar extends Component {
             <header className="toolbar">
                 <div className="toolbar__title">
                     Elementary Cellular Automaton
-                </div>
-                <div className="toolbar__toggle-button">
-                    <ToggleButton
-                        openDrawer={this.props.drawerToggleHandler}
-                    ></ToggleButton>
                 </div>
                 <div className="toolbar__icon">
                     <div

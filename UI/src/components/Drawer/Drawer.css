@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+@import url("https://fonts.googleapis.com/css?family=Saira");
 
 .drawer__window {
     position: absolute;
@@ -58,12 +58,115 @@
 
     color: #ffffff;
 }
-.drawer__switch-group {
-    position: fixed;
-    background-color: #2d313a;
-    top: 90px;
-    bottom: 50px;
-    left: 40px;
-    right: 40px;
-    border-radius: 15px;
+.drawer__window__rule {
+    position: absolute;
+    top: 812px;
+    left: 142px;
+
+    font-family: Saira;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 76px;
+
+    color: #2e2e2e;
+}
+.drawer__window__pattern {
+    position: absolute;
+    top: 208px;
+    left: 52px;
+    width: 174px;
+}
+.drawer__window__button {
+    position: absolute;
+    top: 208px;
+    right: 52px;
+    width: 58px;
+}
+.drawer__window__block--live {
+    margin-bottom: 12px;
+    display: inline-block;
+    background-image: url(../../images/block_live.png);
+    width: 58px;
+    height: 58px;
+}
+.drawer__window__block--dead {
+    margin-bottom: 12px;
+    display: inline-block;
+    background-image: url(../../images/block_dead.png);
+    width: 58px;
+    height: 58px;
+}
+.drawer__window__line {
+    position: absolute;
+    width: 0px;
+    height: 260px;
+    left: 280px;
+
+    border: 3px solid #2e2e2e;
+    border-radius: 5px;
+}
+.drawer__window__arrow {
+    position: absolute;
+    left: 275px;
+    top: 480px;
+
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    border-left: 20px solid #2e2e2e;
+}
+.drawer__window__container input {
+    display: none;
+}
+.drawer__window__container .checkmark {
+    position: relative;
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 12px;
+    display: inline-block;
+    background-image: url(../../images/block_dead.png);
+}
+.drawer__window__container input:checked + .checkmark {
+    position: relative;
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 12px;
+    display: inline-block;
+    background-image: url(../../images/block_live.png);
+
+    animation: pulse-white 1s;
+}
+.drawer__window__container input:not(:checked) + .checkmark {
+    animation: pulse-black 1s;
+}
+@keyframes pulse-black {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+@keyframes pulse-white {
+    0% {
+        box-shadow: 0 0 0 0 rgba(50, 50, 50, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
 }
