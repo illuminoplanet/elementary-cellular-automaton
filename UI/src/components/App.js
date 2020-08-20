@@ -82,7 +82,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="app">
-                <div className="rule" style={{ top: 230, left: 318 }}>
+                <div className="rule" style={{ top: 230, left: 320 }}>
                     Rule {this.state.rule}
                 </div>
                 <div className="arrow"></div>
