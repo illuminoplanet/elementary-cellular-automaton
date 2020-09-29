@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6baef5ed04bd4fc2bbaef8cc02fdd1de",
+    "revision": "fa04ed82af704e884945b541d0da5022",
     "url": "/Elementary-Cellular-Automaton/index.html"
   },
   {
-    "revision": "951ff80ec9636201ce14",
+    "revision": "ae73b2070cffb78331b4",
     "url": "/Elementary-Cellular-Automaton/static/css/main.ebfe7eef.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "951ff80ec9636201ce14",
-    "url": "/Elementary-Cellular-Automaton/static/js/main.65060841.chunk.js"
+    "revision": "ae73b2070cffb78331b4",
+    "url": "/Elementary-Cellular-Automaton/static/js/main.14532edf.chunk.js"
   },
   {
     "revision": "b64a6568b9b4d6da7246",
