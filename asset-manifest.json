@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Elementary-Cellular-Automaton/static/css/main.ebfe7eef.chunk.css",
-    "main.js": "/Elementary-Cellular-Automaton/static/js/main.14532edf.chunk.js",
-    "main.js.map": "/Elementary-Cellular-Automaton/static/js/main.14532edf.chunk.js.map",
-    "runtime-main.js": "/Elementary-Cellular-Automaton/static/js/runtime-main.331b7697.js",
-    "runtime-main.js.map": "/Elementary-Cellular-Automaton/static/js/runtime-main.331b7697.js.map",
-    "static/js/2.2a7ecebb.chunk.js": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js",
-    "static/js/2.2a7ecebb.chunk.js.map": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js.map",
-    "index.html": "/Elementary-Cellular-Automaton/index.html",
-    "precache-manifest.1c77f273924ca6bdb3504965fe7ad653.js": "/Elementary-Cellular-Automaton/precache-manifest.1c77f273924ca6bdb3504965fe7ad653.js",
-    "service-worker.js": "/Elementary-Cellular-Automaton/service-worker.js",
-    "static/css/main.ebfe7eef.chunk.css.map": "/Elementary-Cellular-Automaton/static/css/main.ebfe7eef.chunk.css.map",
-    "static/js/2.2a7ecebb.chunk.js.LICENSE.txt": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js.LICENSE.txt",
-    "static/media/Button.css": "/Elementary-Cellular-Automaton/static/media/button_start.bcd64ce6.svg"
+    "main.css": "/elementary-cellular-automaton/static/css/main.07d0ff88.chunk.css",
+    "main.js": "/elementary-cellular-automaton/static/js/main.83ff6e39.chunk.js",
+    "main.js.map": "/elementary-cellular-automaton/static/js/main.83ff6e39.chunk.js.map",
+    "runtime-main.js": "/elementary-cellular-automaton/static/js/runtime-main.3a3d4288.js",
+    "runtime-main.js.map": "/elementary-cellular-automaton/static/js/runtime-main.3a3d4288.js.map",
+    "static/js/2.2a7ecebb.chunk.js": "/elementary-cellular-automaton/static/js/2.2a7ecebb.chunk.js",
+    "static/js/2.2a7ecebb.chunk.js.map": "/elementary-cellular-automaton/static/js/2.2a7ecebb.chunk.js.map",
+    "index.html": "/elementary-cellular-automaton/index.html",
+    "precache-manifest.0218f1625b3c679d9fc85a39d6e3e25f.js": "/elementary-cellular-automaton/precache-manifest.0218f1625b3c679d9fc85a39d6e3e25f.js",
+    "service-worker.js": "/elementary-cellular-automaton/service-worker.js",
+    "static/css/main.07d0ff88.chunk.css.map": "/elementary-cellular-automaton/static/css/main.07d0ff88.chunk.css.map",
+    "static/js/2.2a7ecebb.chunk.js.LICENSE.txt": "/elementary-cellular-automaton/static/js/2.2a7ecebb.chunk.js.LICENSE.txt",
+    "static/media/Button.css": "/elementary-cellular-automaton/static/media/button_start.bcd64ce6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.331b7697.js",
+    "static/js/runtime-main.3a3d4288.js",
     "static/js/2.2a7ecebb.chunk.js",
-    "static/css/main.ebfe7eef.chunk.css",
-    "static/js/main.14532edf.chunk.js"
+    "static/css/main.07d0ff88.chunk.css",
+    "static/js/main.83ff6e39.chunk.js"
   ]
 }
