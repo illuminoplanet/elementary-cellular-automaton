@@ -22,7 +22,7 @@
     left: 0px;
     top: 0px;
 
-    background-image: url(../../images/button_start.svg);
+    background-image: url(../../resource/button_start.svg);
 }
 .button--start[pulse="1"] {
     animation: pulse-start 1s, flinch 0.4s;
@@ -70,7 +70,7 @@
     left: 0px;
     top: 132px;
 
-    background-image: url(../../images/button_reset.svg);
+    background-image: url(../../resource/button_reset.svg);
 }
 .button--reset[pulse="1"] {
     animation: pulse-reset 1s, flinch 0.4s;

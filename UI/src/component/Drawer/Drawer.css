@@ -127,7 +127,7 @@
 
     margin-bottom: 12px;
     display: inline-block;
-    background-image: url(../../images/block_dead.png);
+    background-image: url(../../resource/block_dead.png);
 }
 .drawer__window__container input:checked + .checkmark {
     position: relative;
@@ -136,7 +136,7 @@
 
     margin-bottom: 12px;
     display: inline-block;
-    background-image: url(../../images/block_live.png);
+    background-image: url(../../resource/block_live.png);
 
     animation: pulse-white 1s;
 }
