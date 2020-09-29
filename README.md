@@ -1,6 +1,6 @@
 # Elementary Cellular Automaton
 
-This is an Elementary Cellular Automaton simulator made with React and Flask. You can check more about elementary cellulat automaton [here](https://en.wikipedia.org/wiki/Elementary_cellular_automaton).
+This is an Elementary Cellular Automaton simulator made with React and Flask. You can check more about elementary cellular automaton [here](https://en.wikipedia.org/wiki/Elementary_cellular_automaton).
 
 ## Getting Started
 

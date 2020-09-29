@@ -84,14 +84,14 @@
 .drawer__window__block--live {
     margin-bottom: 12px;
     display: inline-block;
-    background-image: url(../../images/block_live.png);
+    background-image: url(../../resource/block_live.png);
     width: 58px;
     height: 58px;
 }
 .drawer__window__block--dead {
     margin-bottom: 12px;
     display: inline-block;
-    background-image: url(../../images/block_dead.png);
+    background-image: url(../../resource/block_dead.png);
     width: 58px;
     height: 58px;
 }
