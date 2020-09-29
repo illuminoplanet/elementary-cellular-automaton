@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Elementary-Cellular-Automaton/static/css/main.ebfe7eef.chunk.css",
-    "main.js": "/Elementary-Cellular-Automaton/static/js/main.81fe083e.chunk.js",
-    "main.js.map": "/Elementary-Cellular-Automaton/static/js/main.81fe083e.chunk.js.map",
+    "main.js": "/Elementary-Cellular-Automaton/static/js/main.65060841.chunk.js",
+    "main.js.map": "/Elementary-Cellular-Automaton/static/js/main.65060841.chunk.js.map",
     "runtime-main.js": "/Elementary-Cellular-Automaton/static/js/runtime-main.331b7697.js",
     "runtime-main.js.map": "/Elementary-Cellular-Automaton/static/js/runtime-main.331b7697.js.map",
     "static/js/2.2a7ecebb.chunk.js": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js",
     "static/js/2.2a7ecebb.chunk.js.map": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js.map",
     "index.html": "/Elementary-Cellular-Automaton/index.html",
-    "precache-manifest.d1cf3b333ea0030bc538d8a2d5c66013.js": "/Elementary-Cellular-Automaton/precache-manifest.d1cf3b333ea0030bc538d8a2d5c66013.js",
+    "precache-manifest.be2a3c2b5e2757e4d867be882ac1935a.js": "/Elementary-Cellular-Automaton/precache-manifest.be2a3c2b5e2757e4d867be882ac1935a.js",
     "service-worker.js": "/Elementary-Cellular-Automaton/service-worker.js",
     "static/css/main.ebfe7eef.chunk.css.map": "/Elementary-Cellular-Automaton/static/css/main.ebfe7eef.chunk.css.map",
     "static/js/2.2a7ecebb.chunk.js.LICENSE.txt": "/Elementary-Cellular-Automaton/static/js/2.2a7ecebb.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.331b7697.js",
     "static/js/2.2a7ecebb.chunk.js",
     "static/css/main.ebfe7eef.chunk.css",
-    "static/js/main.81fe083e.chunk.js"
+    "static/js/main.65060841.chunk.js"
   ]
 }
