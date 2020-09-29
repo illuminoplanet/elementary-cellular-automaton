@@ -6,8 +6,17 @@ This is an Elementary Cellular Automaton simulator made with React and Flask. Mo
 
 
 ## How to run 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### Running server
+```console
+foo@bar:~$ cd Simulate
+foo@bar:~$ python3 server.py
+```
+### Running web application 
+```console
+foo@bar:~$ cd UI
+foo@bar:~$ npm start
+```
 
 ## Built With
 
