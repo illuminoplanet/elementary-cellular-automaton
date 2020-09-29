@@ -5,7 +5,7 @@ GRID_SIZE = 100
 
 def init_grid():
     """
-    Initialize the grid 
+    Initialize the grid with random value
 
     Returns
     -------
@@ -14,20 +14,20 @@ def init_grid():
 
     """
 
-    # Initialize grid as random noise of 0 and 1
+    # Initialize the grid as random noise of 0 and 1
     # Width is set as (size of grid + 2) to handle the side edges
     grid = np.random.choice([0, 1], size=(GRID_SIZE, GRID_SIZE + 2))
 
     return grid
 
 
-def simulate_grid(rule):
+def simulate_grid(rules):
     """
     Simulate the grid according to the rules
 
     Parameters
     ----------
-    rule : list
+    rules : list
         set of rules of the cellular automaton
 
     Returns
@@ -46,12 +46,12 @@ def simulate_grid(rule):
         for x in range(1, GRID_SIZE + 1):
             pattern = grid[y - 1, x - 1 : x + 2]  # States of 3 cells above
             previous_state = 7 - np.sum(mask * pattern)  # 111 is 0, ..., 000 is 7
-            grid[y, x] = rule[previous_state]
+            grid[y, x] = rules[previous_state]
 
     return grid
 
 
-def get_grid(rule):
+def get_grid(rules):
     """
     Get the simulated grid
 
@@ -62,9 +62,9 @@ def get_grid(rule):
 
     """
 
-    grid = simulate_grid(rule)
-    # Exclude side edges
-    grid = grid[:, 1 : GRID_SIZE + 1]
+    grid = simulate_grid(rules)
+    grid = grid[:, 1 : GRID_SIZE + 1]  # Exclude side edges
+
     # Need to convert numpy array to list because array can not be converted to JSON format
     grid = grid.tolist()
 
