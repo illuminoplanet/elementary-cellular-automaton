@@ -31,7 +31,7 @@ export default class App extends Component {
     }
     fetchGrid() {
         fetch(
-            "https://5cof2ds052.execute-api.us-east-1.amazonaws.com/Elementary-Cellular-Automaton/get_grid",
+            "https://5cof2ds052.execute-api.us-east-1.amazonaws.com/elementary-cellular-automaton/get-grid",
             {
                 method: "POST",
                 mode: "cors",
