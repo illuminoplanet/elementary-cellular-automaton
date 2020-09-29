@@ -2,7 +2,9 @@
 
 This is an Elementary Cellular Automaton simulator made with React and Flask. More informations about elementary cellular automaton can be found [here](https://en.wikipedia.org/wiki/Elementary_cellular_automaton).
 
+<br></br>
 ![Sample Image](/sample_image.png)
+<br></br>
 
 
 ## How to run 
