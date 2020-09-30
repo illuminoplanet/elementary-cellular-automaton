@@ -33,9 +33,10 @@ export default class App extends Component {
         fetch(
             "https://5cof2ds052.execute-api.us-east-1.amazonaws.com/elementary-cellular-automaton/get-grid",
             {
+                headers:
+                    "Origin: https://illuminoplanet.github.io/elementary-cellular-automaton/",
                 method: "POST",
                 mode: "cors",
-                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     rules: this.state.currentRules,
                 }),
