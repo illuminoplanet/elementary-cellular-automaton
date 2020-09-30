@@ -31,7 +31,7 @@ export default class App extends Component {
     }
     fetchGrid() {
         fetch(
-            "https://5cof2ds052.execute-api.us-east-1.amazonaws.com/elementary-cellular-automaton/get-grid",
+            "https://xeq9l2z433.execute-api.us-east-1.amazonaws.com/prod/elementary-cellular-automaton/get-grid",
             {
                 headers: { "Content-Type": "application/json" },
                 method: "POST",
