@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/elementary-cellular-automaton/precache-manifest.7ce5e501092c021c104388837d361e9b.js"
+  "/elementary-cellular-automaton/precache-manifest.0cff44b4cedff283b727da54aff2d3ab.js"
 );
 
 self.addEventListener('message', (event) => {
