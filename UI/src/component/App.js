@@ -30,17 +30,14 @@ export default class App extends Component {
         this.updateCells();
     }
     fetchGrid() {
-        fetch(
-            "https://xeq9l2z433.execute-api.us-east-1.amazonaws.com/prod/elementary-cellular-automaton/get-grid",
-            {
-                headers: { "Content-Type": "application/json" },
-                method: "POST",
-                crossDomain: true,
-                body: JSON.stringify({
-                    rules: this.state.currentRules,
-                }),
-            }
-        )
+        fetch("/api/return-grid", {
+            method: "POST",
+            mode: "cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                rules: this.state.currentRules,
+            }),
+        })
             .then((response) => {
                 return response.json();
             })
