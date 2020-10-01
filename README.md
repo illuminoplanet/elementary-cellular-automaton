@@ -6,6 +6,7 @@ This is an Elementary Cellular Automaton simulator made with React and Flask. Mo
 ![Sample Image](/sample_image.png)
 <br></br>
 
+Deployed version can be tried [here](https://illuminoplanet.github.io/elementary-cellular-automaton/).
 
 ## How to run 
 
